@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    <TextView
+
+            android:id="@+id/student_name_item"
+            android:text="Student name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:layout_toRightOf="@id/student_name_item"
+
+        android:textSize="20sp"
+        android:id="@+id/module_item"
+            android:text="Module name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/student_name_item"
+        android:layout_toEndOf="@id/student_name_item" />
+
+    <TextView
+        android:layout_toRightOf="@id/module_item"
+            android:id="@+id/grade_item"
+            android:text="10"
+        android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/module_item"
+        android:layout_toEndOf="@id/module_item" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/attended"
+        android:src="@drawable/ic_baseline_attended_24"
+        android:layout_toRightOf="@id/grade_item"
+        />
+</RelativeLayout>

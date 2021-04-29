@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/nav_graph"
+            app:startDestination="@id/loginFragment">
+
+    <fragment
+            android:id="@+id/loginFragment"
+            android:name="cat.itb.examenuf1.Fragments.loginFragment"
+            android:label="loginFragment">
+        <action
+            android:id="@+id/login_to_Main"
+            app:destination="@id/mainListFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/mainListFragment"
+            android:name="cat.itb.examenuf1.Fragments.MainListFragment"
+            android:label="MainListFragment">
+        <action
+            android:id="@+id/main_to_detail"
+            app:destination="@id/detailFragment"
+
+
+            />
+        <action
+            android:id="@+id/main_to_login"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/detailFragment"
+            android:name="cat.itb.examenuf1.Fragments.detailFragment"
+            android:label="detailFragment">
+        <action
+            android:id="@+id/detail_to_main"
+            app:destination="@id/mainListFragment" />
+        <argument
+            android:name="grade"
+            app:argType="cat.itb.examenuf1.Data.Grade" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="cat.itb.examenuf1.Fragments.registerFragment"
+        android:label="registerFragment" >
+        <action
+            android:id="@+id/action_registerFragment_to_mainListFragment"
+            app:destination="@id/mainListFragment" />
+    </fragment>
+</navigation>
